@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackProjectClick } from "@/hooks/useAnalytics";
 
@@ -115,30 +115,18 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex gap-2 pt-2">
+                <div className="pt-2">
                   <Button
                     size="sm"
                     variant="outline"
-                    className="flex-1 glass"
-                    onClick={() => {
-                      trackProjectClick(project.title, "demo");
-                      window.open(project.demo, "_blank");
-                    }}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-1" />
-                    Demo
-                  </Button>
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="flex-1 glass"
+                    className="w-full glass"
                     onClick={() => {
                       trackProjectClick(project.title, "github");
                       window.open(project.github, "_blank");
                     }}
                   >
                     <Github className="h-4 w-4 mr-1" />
-                    Code
+                    View on GitHub
                   </Button>
                 </div>
               </div>
