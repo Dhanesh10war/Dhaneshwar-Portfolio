@@ -1,6 +1,12 @@
 import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackProjectClick } from "@/hooks/useAnalytics";
+import phoenix360Image from "@/assets/project-phoenix360.jpg";
+import defenseSimulatorImage from "@/assets/project-defense-simulator.jpg";
+import iotDroneImage from "@/assets/project-iot-drone.jpg";
+import geospatialImage from "@/assets/project-geospatial.jpg";
+import loanPortalImage from "@/assets/project-loan-portal.jpg";
+import irVehicleImage from "@/assets/project-ir-vehicle.jpg";
 
 const Projects = () => {
   const projects = [
@@ -11,7 +17,7 @@ const Projects = () => {
       achievement: "18% accuracy improvement through dataset augmentation",
       event: "TANSAM Hackathon 2025",
       github: "#",
-      demo: "#",
+      image: phoenix360Image,
     },
     {
       title: "AI-Driven Defense Training Simulator",
@@ -20,7 +26,7 @@ const Projects = () => {
       achievement: "22% increase in target recognition speed",
       event: "ARMADA Internship - Indian Air Force Collaboration",
       github: "#",
-      demo: "#",
+      image: defenseSimulatorImage,
     },
     {
       title: "IoT Drone Detection System",
@@ -29,7 +35,7 @@ const Projects = () => {
       achievement: "Real-time aerial threat detection",
       event: "ARMADA Industrial Automation Internship",
       github: "#",
-      demo: "#",
+      image: iotDroneImage,
     },
     {
       title: "Geospatial ML Pipeline",
@@ -38,7 +44,7 @@ const Projects = () => {
       achievement: "Automated environmental data analysis",
       event: "Academic Project",
       github: "#",
-      demo: "#",
+      image: geospatialImage,
     },
     {
       title: "Loan Eligibility LSP Portal",
@@ -47,7 +53,7 @@ const Projects = () => {
       achievement: "Streamlined loan approval process",
       event: "Web Development Project",
       github: "#",
-      demo: "#",
+      image: loanPortalImage,
     },
     {
       title: "IR-Controlled Vehicle System",
@@ -56,7 +62,7 @@ const Projects = () => {
       achievement: "Hands-on embedded systems learning",
       event: "ARMADA Internship Project",
       github: "#",
-      demo: "#",
+      image: irVehicleImage,
     },
   ];
 
@@ -80,9 +86,14 @@ const Projects = () => {
               className="glass rounded-2xl overflow-hidden hover:glow transition-all hover:scale-105 animate-fade-in group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-secondary/20 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent)] opacity-50"></div>
+              {/* Project Image */}
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
                 <div className="absolute bottom-0 right-0 p-4">
                   <span className="glass px-3 py-1 rounded-full text-xs text-primary">
                     {project.event}
