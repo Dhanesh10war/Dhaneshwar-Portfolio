@@ -1,4 +1,5 @@
-import { User } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import profileImage from "@/assets/profile.jpg";
 
 const About = () => {
   return (
@@ -12,10 +13,13 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="relative group">
             <div className="glass glow p-8 rounded-2xl aspect-square flex items-center justify-center hover:scale-105 transition-transform">
-              <User className="h-64 w-64 text-primary opacity-50" />
+              <Avatar className="h-64 w-64">
+                <AvatarImage src={profileImage} alt="Dhaneshwar R" className="object-cover" />
+                <AvatarFallback className="text-6xl">DR</AvatarFallback>
+              </Avatar>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-3xl -z-10 group-hover:blur-2xl transition-all"></div>
           </div>
