@@ -90,7 +90,7 @@ const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com/in/dhaneshwar-r"
+              href="https://www.linkedin.com/in/dhaneshwar-r-523190280/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 glass rounded-full hover:glow transition-all hover:scale-110"
