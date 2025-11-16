@@ -16,7 +16,7 @@ const About = () => {
           {/* Profile Image */}
           <div className="relative group">
             <div className="glass glow p-8 rounded-2xl aspect-square flex items-center justify-center hover:scale-105 transition-transform">
-              <Avatar className="h-64 w-64">
+              <Avatar className="h-80 w-80">
                 <AvatarImage src={profileImage} alt="Dhaneshwar R" className="object-cover" />
                 <AvatarFallback className="text-6xl">DR</AvatarFallback>
               </Avatar>
