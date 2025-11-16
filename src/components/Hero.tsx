@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 justify-center pt-8">
             <Button
               size="lg"
-              className="glass glow hover:scale-105 transition-transform"
+              className="glow hover:scale-105 transition-transform"
               onClick={() => scrollToSection("projects")}
             >
               View Projects
